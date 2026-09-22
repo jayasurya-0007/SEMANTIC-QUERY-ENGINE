@@ -1,0 +1,145 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: #0b1020;
+  color: #e6ebff;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1a2140, #0b1020 60%);
+}
+
+.auth-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.auth-card {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #121936;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 14px;
+  padding: 14px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.panel {
+  background: #121936;
+  border: 1px solid #26305e;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-box {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 6px;
+}
+
+.bubble {
+  max-width: 86%;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.bubble.user {
+  align-self: flex-end;
+  background: #2d5bff;
+}
+
+.bubble.assistant {
+  align-self: flex-start;
+  background: #1e294d;
+}
+
+.typing {
+  opacity: 0.75;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+textarea,
+input,
+button {
+  border-radius: 8px;
+  border: 1px solid #3a467f;
+  background: #0f1530;
+  color: #e6ebff;
+  padding: 10px;
+}
+
+button {
+  cursor: pointer;
+  background: #314dcc;
+}
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input input {
+  flex: 1;
+}
+
+.source-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.source-list li {
+  padding: 8px;
+  background: #0f1530;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.muted {
+  opacity: 0.75;
+  margin: 0;
+}
+
+.error {
+  color: #ff8e8e;
+}
+
+.toggle {
+  margin: 0;
+  cursor: pointer;
+  color: #9fb4ff;
+}
